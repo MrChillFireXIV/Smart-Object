@@ -1,0 +1,14 @@
+{
+  "name": "martha-collar",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.20.0",
+    "vite": "^6.0.0"
+  }
+}

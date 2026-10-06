@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Martha's collar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="paper">
+      <div class="frame">
+        <section class="left">
+          <div class="name">
+            <h1>
+              <span class="pname"></span>
+              <button class="chev" aria-controls="menu" aria-label="Show details">
+                <svg viewBox="0 0 24 24">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </h1>
+            <div class="menu" id="menu" hidden></div>
+          </div>
+          <div class="batt">
+            <button class="gear" aria-label="Settings">
+              <svg viewBox="0 0 24 24">
+                <path d="M9.84 4.92 L10.23 1.95 L13.77 1.95 L14.16 4.92 L15.47 5.47 L17.85 3.64 L20.36 6.15 L18.53 8.53 L19.08 9.84 L22.05 10.23 L22.05 13.77 L19.08 14.16 L18.53 15.47 L20.36 17.85 L17.85 20.36 L15.47 18.53 L14.16 19.08 L13.77 22.05 L10.23 22.05 L9.84 19.08 L8.53 18.53 L6.15 20.36 L3.64 17.85 L5.47 15.47 L4.92 14.16 L1.95 13.77 L1.95 10.23 L4.92 9.84 L5.47 8.53 L3.64 6.15 L6.15 3.64 L8.53 5.47Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+            <div class="cell" role="img">
+              <i></i>
+            </div>
+            <b>
+              <span id="battery"></span>
+            </b>
+          </div>
+          <ul class="stats">
+            <li>Steps <b>
+                <span id="steps"></span>
+              </b>
+            </li>
+            <li>
+              <span id="lbl"></span>
+              <b>
+                <span id="barks"></span>
+              </b>
+            </li>
+            <li>Heartrate <b>
+                <span id="heart"></span>
+              </b>
+            </li>
+            <li>Temp <b>
+                <span id="temp"></span>
+              </b>
+            </li>
+            <li id="x1"></li>
+            <li>Calories <b>
+                <span id="cal"></span>
+              </b>
+            </li>
+            <li id="x2"></li>
+            <li>Sleep <b>
+                <span id="sleep"></span>
+              </b>
+            </li>
+          </ul>
+        </section>
+        <div class="slot">
+          <span class="ttl">SMART
+            <br />COLLAR
+          </span>
+          <div id="alert"></div>
+        </div>
+        <section class="radar">
+          <button class="mapbtn" aria-label="Open house map">
+            <svg viewBox="-100 -100 200 200" role="img">
+              <defs>
+                <clipPath id="fp">
+                  <circle r="72"></circle>
+                </clipPath>
+                <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <path d="M8 0H0V8" class="gl"></path>
+                </pattern>
+              </defs>
+              <circle class="yard" r="96"></circle>
+              <circle class="bp" r="74"></circle>
+              <text y="-80">N</text>
+              <text y="90">S</text>
+              <text x="-86" y="3">W</text>
+              <text x="86" y="3">E</text>
+              <g clip-path="url(#fp)">
+                <rect class="grid" x="-74" y="-74" width="148" height="148"></rect>
+                <g id="rRooms"></g>
+                <g id="rDoors"></g>
+                <g id="rMarks"></g>
+              </g>
+              <g id="rDot" style="transition:transform 1s ease">
+                <circle r="4" class="dot"></circle>
+                <circle r="4" id="ping" class="ping"></circle>
+                <text y="-8" class="s" id="rName"></text>
+              </g>
+            </svg>
+          </button>
+          <button class="bt" aria-label="Bluetooth devices">
+            <svg viewBox="0 0 24 24">
+              <path d="m7 7 10 10-5 5V2l5 5L7 17"></path>
+            </svg>
+          </button>
+          <button class="beep" aria-label="Beep the collar">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9v6h4l5 4V5L7 9z"></path>
+              <path d="M15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"></path>
+            </svg>
+          </button>
+          <p class="note beepn">Collar
+            <br />Beep ↙
+          </p>
+        </section>
+        <div class="active" aria-live="polite">
+          <span class="h">
+            <span id="state"></span>
+          </span>
+          <div id="pet">
+            <div class="pup"></div>
+          </div>
+          <span class="w">
+            <span id="doing"></span>
+          </span>
+        </div>
+      </div>
+      <div id="modal"></div>
+    </div>
+  </div>
+  <script src="logic.js"></script>
+  <script src="svg.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
